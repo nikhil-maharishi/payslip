@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
+    <style type="text/css">
+        #success_message {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form class="well form-horizontal" action=" " method="" id="contact_form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>
+                    <center>
+                        <h2><b>Payslip Form</b></h2>
+                    </center>
+                </legend><br>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Employee ID: </label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="" placeholder="" id="emp_id_input" class="form-control" type="text">
+                        </div>
+                        <span id="error" style="display: none;">First name is Required and only contain
+                            characters.</span>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Department:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="" placeholder="" id="department_input" id="department" class="form-control"
+                                type="text">
+                        </div>
+                        <span id="dep" style="display: none;">Last name should only contain characters.</span>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Name:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="" placeholder="" id="name_input" class="form-control" type="text"
+                                id="username">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Designation:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="" placeholder="" id="designation_input" class="form-control" type="text">
+                        </div>
+                        <small id="error_password" style="display: none;">A minimum 8 characters password contains a
+                            combination of uppercase and lowercase letter and number are required.</small>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">salary Slip:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="" placeholder="" id="salary_slip_input" class="form-control" type="text">
+                        </div>
+                        <small id="error_cpassword" style="display: none;">Password and confirm password must
+                            match.</small>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Joining Date: </label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="" placeholder="" id="date_input" class="form-control" type="date">
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Month:</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+
+                            <input name="" placeholder="" id="month_input" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="dy_input" id="dynamic_input" style="display: flex; flex-direction: column; ">
+                    <div class="all_input" style="display: flex; justify-content: space-around; margin-bottom: 15px;">
+
+                        <form class="st_form" action=" " method="" id="static_form">
+                            <select name="" id="EnD">
+                                <option value="">Select a value</option>
+                                <option>Earning</option>
+                                <option>Deduction</option>
+                                <option>Reimbursement</option>
+                            </select>
+
+                            <input name="" placeholder="Type" id="type" type="text">
+
+                            <input name="" placeholder="Amount" id="amount" type="text">
+
+
+                            <button type="button" id="add_btn"
+                                style="background-color:rgb(238,160,50); border:none; color:white; border-radius:5px; padding:7px; padding-left:30px; padding-right:30px">Add</button>
+                        </form>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i
+                        class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4"><br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button"
+                            class="btn btn-warning" id="btn">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGenerate <span
+                                class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    </div><!-- /.container -->
+
+    <button id="doPrint"
+        style="background-color:rgb(238,160,50); border:none; color:white; border-radius:5px; padding:7px; padding-left:30px; padding-right:30px">Print</button>
+    <div class="main" id="printDiv">
+
+        <div class="header" style="display:flex; justify-content:flex-end; flex-direction: column; ">
+            <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1496323936/yxlllvb72nnc9hoaaqn3.png"
+                style="width: 10%; height: 10%; margin-left: 90%;">
+            <table>
+                <tr style="text-align: end;">
+                    <td>WorkSuit</td>
+                </tr>
+                <tr style="text-align: end;">
+                    <td>Your company address here</td>
+                </tr>
+                <tr style="text-align: end;">
+                    <td>Phone:1234567891</td>
+                </tr>
+                <tr style="text-align: end;">
+                    <td>Email:company@email.com</td>
+                </tr>
+            </table>
+
+        </div>
+        <hr>
+        <div class="content">
+
+            <h3 style="display: flex; justify-content: left">Payslip For the month of <span id="month"></span></h3>
+            <div class="content_head" style="display: flex; justify-content: space-evenly;">
+                <table style="border-collapse: collapse;">
+                    <tr>
+
+                        <td style="padding: 8px; font-weight: bold;">Employee ID: </td>
+                        <td id="emp_id"></td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; font-weight: bold;">Department: </td>
+                        <td style="padding: 2px;" id="department"></td>
+                    </tr>
+                </table>
+                <table style="border-collapse: collapse;">
+                    <tr>
+                        <td style="font-weight: bold;">Name: </td>
+                        <td style="padding: 2px;" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; font-weight: bold;">Designation: </td>
+                        <td style="padding: 2px;" id="designation"></td>
+                        </td>
+                    </tr>
+                </table>
+                <table style=" border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 8px; font-weight: bold;">salary Slip: </td>
+                        <td style="padding: 2px;" id="salary_slip"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; font-weight: bold;">Joining Date: </td>
+                        <td style="padding: 2px;" id="date"> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="main_div" style="display: flex;  flex-direction: column; ">
+                <div class="earning_deduction" style="display: flex; justify-content: space-between;">
+                    <table id="earning" style="border-collapse: collapse; width: 49%; margin: 5px;">
+                        <tr style="text-align: justify;  background-color: #dddddd; -webkit-print-color-adjust: exact;">
+                            <th style="padding: 8px;">Earning</th>
+                            <th style="padding: 8px; text-align: right;">Amount</th>
+
+                        </tr>
+
+                    </table>
+
+                    <table id="deduction" style="border-collapse: collapse; width: 50%; margin: 5px;">
+                        <tr style="text-align: justify ; background-color: #dddddd; -webkit-print-color-adjust: exact;">
+                            <th style="padding: 8px;">Deduction</th>
+                            <th style="padding: 8px; text-align: right;">Amount</th>
+                        </tr>
+                
+
+                    </table>
+                   
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <table style="border-collapse: collapse; width: 49%; margin: 5px;" >
+                        <tr style="font-weight: bold;">
+                            <th style="padding: 8px;">Gross Earning</th>
+                            <th id="gross_earning" style="padding: 8px; text-align: right;"></th>
+
+                        </tr>
+                    </table>
+
+                    <table style="border-collapse: collapse; width: 51%;" >
+                        <tr style="font-weight: bold; margin-left: 5px;">
+                            <th style="padding: 8px;">Total Deduction</th>
+                            <th id="total_deduction" style="padding: 8px; text-align: right;"></th>
+
+                        </tr>
+                    </table>
+                </div>
+                <table id='reimbursement' style="border-collapse: collapse; margin: 5px;">
+                    <tr
+                        style=" background-color: #dddddd; -webkit-print-color-adjust: exact; text-align: justify;justify-content: space-between;">
+                        <th style="padding: 8px; text-align: left;">Reimbursement</th>
+                        <th style="padding: 8px; text-align: right;"></th>
+                    </tr>
+                   
+                </table>
+                <table style="border-collapse: collapse; width: 100%;" >
+                    <tr style="font-weight: bold; margin-left: 5px;">
+                        <th style="padding: 8px;">Total Reimbursement</th>
+                        <th id="total_reimbursement" style="padding: 8px; text-align: right;"></th>
+
+                    </tr>
+                </table>
+
+
+            </div>
+            <hr>
+
+
+        </div>
+        <div class="footer" style="display: flex; justify-content:space-between; flex-direction: column;">
+            <table style="display: flex; justify-content: center;">
+                <td>Net Salary:</td>
+                <td id="net_salary"></td>
+            </table>
+
+
+            <span style="display: flex; justify-content: center;">Net Salary = (Gross Earning-Total
+                Deduction+Reimbursement)</span>
+        </div>
+    </div>
+</body>
+<script src="paySlip1.js"></script>
+
+</html>
